@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import cv2
+import tensorflow as tf
 
 #Plot grayscale Image function
 def PlotXRay (Image):
@@ -30,3 +31,12 @@ if uploaded_file is not None:
     st.image(uploaded_file)
     PlotXRay(cv2.imread(uploaded_file))
     
+    #Load the model
+    model = tf.keras.models.load_model('/content/drive/MyDrive/Colab Notebooks/X_Ray_Project/Ricardo Model2.h5')
+    st.write(model.summary())
+
+    #predict
+    st.write('### Prediction')
+    predictonClass = model.predict(uploaded_file)
+    st.write("The prediction for the image ", uploaded_file.name, "is ", predictonClass)
+

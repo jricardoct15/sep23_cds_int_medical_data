@@ -22,7 +22,7 @@ uploaded_file = st.file_uploader("Choose a file", type='jpg')
 if uploaded_file is not None:
     # To read file as bytes:
     bytes_data = uploaded_file.getvalue()
-    #st.write(bytes_data)
     file = uploaded_file.read() # Read the data
+    st.write("The image ", file, "was load successufully")
     image_result = open(uploaded_file.name, 'wb')
-    PlotXRay (image_result)
+    #PlotXRay (image_result)

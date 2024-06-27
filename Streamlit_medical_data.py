@@ -26,3 +26,4 @@ if uploaded_file is not None:
     st.write("The image ", uploaded_file.name, "was load successufully, with ",uploaded_file.size," Bytes.")
     #image_result = open(uploaded_file.name, 'wb')
     #PlotXRay (image_result)
+    st.image(uploaded_file)

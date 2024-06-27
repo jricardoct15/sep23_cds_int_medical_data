@@ -32,7 +32,7 @@ if uploaded_file is not None:
     PlotXRay(cv2.imread(uploaded_file))
     
     #Load the model
-    model = tf.keras.models.load_model('/content/drive/MyDrive/Colab Notebooks/X_Ray_Project/Ricardo Model2.h5')
+    model = tf.keras.models.load_model('Ricardo Model2.h5')
     st.write(model.summary())
 
     #predict

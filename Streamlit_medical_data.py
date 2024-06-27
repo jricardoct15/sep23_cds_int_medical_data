@@ -22,8 +22,9 @@ uploaded_file = st.file_uploader("Choose a file", type='jpg')
 if uploaded_file is not None:
     # To read file as bytes:
     bytes_data = uploaded_file.getvalue()
+    imageLoaded=[x.decode("utf8") for x in bytes_data.split(b"\x00") if len(x)]
     file = uploaded_file.read() # Read the data
     st.write("The image ", uploaded_file.name, "was load successufully, with ",uploaded_file.size," Bytes.")
     st.image(uploaded_file)
-    PlotXRay(fbytes_data)
+    PlotXRay(imageLoaded)
     

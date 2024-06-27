@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+import cv2
 
 #Plot grayscale Image function
 def PlotXRay (Image):
@@ -27,5 +28,5 @@ if uploaded_file is not None:
     file = uploaded_file.read() # Read the data
     st.write("The image ", uploaded_file.name, "was load successufully, with ",uploaded_file.size," Bytes.")
     st.image(uploaded_file)
-    PlotXRay(mpimg.imread(uploaded_file,format='jpg'))
+    PlotXRay(cv2.imread(uploaded_file,format='jpg'))
     

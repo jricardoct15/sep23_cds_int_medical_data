@@ -28,5 +28,5 @@ if uploaded_file is not None:
     file = uploaded_file.read() # Read the data
     st.write("The image ", uploaded_file.name, "was load successufully, with ",uploaded_file.size," Bytes.")
     st.image(uploaded_file)
-    PlotXRay(cv2.imread(uploaded_file,format='jpg'))
+    PlotXRay(cv2.imread(uploaded_file))
     

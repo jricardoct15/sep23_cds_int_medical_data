@@ -23,6 +23,6 @@ if uploaded_file is not None:
     # To read file as bytes:
     bytes_data = uploaded_file.getvalue()
     file = uploaded_file.read() # Read the data
-    st.write("The image ", file['filename'], "was load successufully")
+    st.write("The image ", uploaded_file.name, "was load successufully, with ",uploaded_file.size," Bytes.")
     #image_result = open(uploaded_file.name, 'wb')
     #PlotXRay (image_result)

@@ -6,7 +6,7 @@ from PIL import Image
 import io
 import numpy as np
 #import cv2
-#import tensorflow as tf
+import tensorflow as tf
 
 #Plot grayscale Image function
 def PlotXRay (Image):

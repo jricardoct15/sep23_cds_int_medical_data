@@ -2,3 +2,4 @@ matplotlib
 seaborn
 scikit-learn
 tensorflow
+numpy

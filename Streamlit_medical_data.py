@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
-import cv2
+#import cv2
 import tensorflow as tf
 
 #Plot grayscale Image function
